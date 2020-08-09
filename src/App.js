@@ -36,7 +36,7 @@ export default class App extends Component {
 
     if (
       contacts.find((contact) =>
-        contact.info.toLowerCase().includes(nameResult.toLowerCase())
+        contact.name.toLowerCase().includes(nameResult.toLowerCase())
       )
     ) {
       alert("this user name already in your numberlist");
