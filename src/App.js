@@ -28,7 +28,7 @@ export default class App extends Component {
 
   addTask = (nameResult, numberResult) => {
     const { contacts } = this.state;
-    const name = {
+    const info = {
       id: uuidv4(),
       name: nameResult,
       number: numberResult,
@@ -36,14 +36,14 @@ export default class App extends Component {
 
     if (
       contacts.find((contact) =>
-        contact.name.toLowerCase().includes(nameResult.toLowerCase())
+        contact.info.toLowerCase().includes(nameResult.toLowerCase())
       )
     ) {
       alert("this user name already in your numberlist");
     } else {
       this.setState((prevState) => {
         return {
-          contacts: [...prevState.contacts, name],
+          contacts: [...prevState.contacts, info],
         };
       });
     }
